@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "6ca18b25-5f37-4177-8040-283fc025c2dd",
-		"name": "JiraAPiPostman Copy",
+		"_postman_id": "d50e687f-4431-4e1a-82d9-7dab03cd9ed5",
+		"name": "JiraAPiPostman Copy 3",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "9881888"
 	},
@@ -487,7 +487,11 @@
 									"console.log(response.values[0].id);\r",
 									"pm.collectionVariables.set('projectID', response.values[0].id);\r",
 									"\r",
-									"//postman.setNextRequest(\"Get All issue types for project\");"
+									"//postman.setNextRequest(\"Get All issue types for project\");\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -717,7 +721,11 @@
 									"console.log(response[0].accountId);\r",
 									"pm.collectionVariables.set('accountId', response[0].accountId);\r",
 									"\r",
-									"//postman.setNextRequest(null);"
+									"//postman.setNextRequest(null);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
